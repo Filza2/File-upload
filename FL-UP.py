@@ -52,7 +52,7 @@ req3=get(f"https://free.files.fm/finish_upload.php?upload_hash={id}",headers=h3)
 req4=get(f'https://files.fm/u/{id}').text
 if '"status":"ok"' in req3:
   date_delete=re.findall('<div class="upload_info__delete_warning">(.*?)</div>',req4)[0]
-  print(f"[!] Done uploading File "{file_name}"...")
+  print(f"[!] Done uploading File '{file_name}'...")
   print(f'[+] Your Link To Mange The File: https://files.fm/u/{id}')
   print('')
   print(f'[\] Your File Will Be Deleted On:\n{date_delete}')  
