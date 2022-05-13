@@ -1,5 +1,7 @@
-import re
-from requests import get,post
+try:
+  import re
+  from requests import get,post
+except Exception as FL:exit(FL)
 print("""
 ███████╗██╗         ██╗   ██╗██████╗ 
 ██╔════╝██║         ██║   ██║██╔══██╗
@@ -7,10 +9,13 @@ print("""
 ██╔══╝  ██║  ╚════╝ ██║   ██║██╔═══╝ 
 ██║     ███████╗    ╚██████╔╝██║     
 ╚═╝     ╚══════╝     ╚═════╝ ╚═╝     
-<\> @TweakPY""")                      
+      By @TweakPY - @vv1ck""")                      
 print('-'*30)
 file_name=input("[+] Set a File Name: ")
-context=input("[+] The File Context:\n")
+cn=input("[+] The File Name: ")
+try:
+  context=open(cn,'r').read()
+except FileNotFoundError:exit('[!] File Not Found .')
 print('-'*30)
 h={'Host': 'files.fm','User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0','Accept': '*/*','Accept-Language': 'ar,en-US;q=0.7,en;q=0.3','Accept-Encoding': 'gzip, deflate','X-Requested-With': 'XMLHttpRequest','Referer': 'https://files.fm/','Te': 'trailers'}
 req=get("https://files.fm/server_scripts/get_upload_id.php?show_add_key=1",headers=h).text
