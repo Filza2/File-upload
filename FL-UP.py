@@ -1,7 +1,5 @@
-try:
-  import re
-  from requests import get,post
-except Exception as FL:exit(FL)
+try:import re;from requests import get,post
+except Exception as e:print(f'[!] Download The Missing Module ! , {e}');exit()
 print("""
 ███████╗██╗         ██╗   ██╗██████╗ 
 ██╔════╝██║         ██║   ██║██╔══██╗
