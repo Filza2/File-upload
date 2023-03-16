@@ -10,7 +10,8 @@ def header():
 ██║     ██║███████╗███████╗    ╚██████╔╝██║     ███████╗╚██████╔╝██║  ██║██████╔╝
 ╚═╝     ╚═╝╚══════╝╚══════╝     ╚═════╝ ╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ 
                                                                                   
-                            By @TweakPY - @vv1ck""")
+                            By @TweakPY - @vv1ck
+""")
 def File_uploader():
     content_file=input("- The File Name : ")
     file_name=uuid4()
