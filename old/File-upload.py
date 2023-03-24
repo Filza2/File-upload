@@ -24,6 +24,6 @@ Content-Type: application/octet-stream
 -----------------------------240332332236763587692188904524--'''
     r=post('https://ttm.sh/',headers={'Host': 'ttm.sh','User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0','Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8','Accept-Language': 'ar,en-US;q=0.7,en;q=0.3','Accept-Encoding': 'gzip, deflate','Content-Type': 'multipart/form-data; boundary=---------------------------240332332236763587692188904524'},data=d)
     if "https://ttm.sh/" in r.text:header();print(f"- Done successfully, Your File at : {r.text}")
-    else:header();print(r.text);exit("- Error ! ")#print(r.text)
+    else:header();exit("- Error ! ")#print(r.text)
     
 header();File_uploader()
